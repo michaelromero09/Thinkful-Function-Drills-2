@@ -26,16 +26,15 @@ function beyond(num) {
 // beyond(Number.NEGATIVE_INFINITY);
 
 function decode(codedString) {
-  if (codedString[0] === 'a' ) {
-  return console.log(codedString[1]);
-  } else if (codedString[0] === 'b') {
+  if (codedString[0] === "a") {
+    return console.log(codedString[1]);
+  } else if (codedString[0] === "b") {
     return console.log(codedString[2]);
-  } else if (codedString[0] === 'c') {
+  } else if (codedString[0] === "c") {
     return console.log(codedString[3]);
-  } else if (codedString[0] === 'd') {
-      return console.log(codedString[4]);
-  } else 
-  return console.log(" ");
+  } else if (codedString[0] === "d") {
+    return console.log(codedString[4]);
+  } else return console.log(" ");
 }
 // decode('craft');
 // decode('block');
@@ -47,29 +46,50 @@ function decode(codedString) {
 // decode('droop');
 
 function howManyDays(month, leapYear) {
-  switch(month) {
-  case 'January':
-  case 'March':
-  case 'May':
-  case 'July':
-  case 'August':
-  case 'October':
-  case 'December':
-    return `${month} has 31 days`;
-  case 'April':
-  case 'June':
-  case 'September':
-  case 'November':
-    return `${month} has 30 days`;
-  case 'February':
-    if (leapYear) {
-      return `${month} has 29 days`;
-    } else {
-      return `${month} has 28 days`;
-    }
-  default:
-    return 'Must provide a valid month';
+  switch (month) {
+    case "January":
+    case "March":
+    case "May":
+    case "July":
+    case "August":
+    case "October":
+    case "December":
+      return `${month} has 31 days`;
+    case "April":
+    case "June":
+    case "September":
+    case "November":
+      return `${month} has 30 days`;
+    case "February":
+      if (leapYear) {
+        return `${month} has 29 days`;
+      } else {
+        return `${month} has 28 days`;
+      }
+    default:
+      return "Must provide a valid month";
   }
 }
 
-console.log(howManyDays('June', true));
+// console.log(howManyDays('June', true));
+
+function shoot(num) {
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  if (num === randomNo) {
+    return console.log("Tie!");
+  } else if (num === 1 && randomNo == 2) {
+    console.log("You chose Rock, They chose Paper. You lose!");
+  } else if (num === 1 && randomNo == 3) {
+    console.log("You chose Rock, They chose Scissors. You win!");
+  } else if (num === 2 && randomNo == 1) {
+    console.log("You chose Paper, They chose Rock. You win!");
+  } else if (num === 2 && randomNo == 3) {
+    console.log("You chose Paper, They chose Scissors. You lose!");
+  } else if (num === 3 && randomNo == 1) {
+    console.log("You chose Scissors, They chose Rock. You lose!");
+  } else if (num === 3 && randomNo == 2) {
+    console.log("You chose Scissors, They chose Paper. You win!");
+  }
+}
+shoot(1);
+//1=Rock, 2=Paper, 3=Scissors
