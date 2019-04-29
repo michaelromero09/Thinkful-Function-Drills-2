@@ -37,11 +37,39 @@ function decode(codedString) {
   } else 
   return console.log(" ");
 }
-decode('craft');
-decode('block');
-decode('argon');
-decode('meter');
-decode('bells');
-decode('brown');
-decode('croon');
-decode('droop');
+// decode('craft');
+// decode('block');
+// decode('argon');
+// decode('meter');
+// decode('bells');
+// decode('brown');
+// decode('croon');
+// decode('droop');
+
+function howManyDays(month, leapYear) {
+  switch(month) {
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    return `${month} has 31 days`;
+  case 'April':
+  case 'June':
+  case 'September':
+  case 'November':
+    return `${month} has 30 days`;
+  case 'February':
+    if (leapYear) {
+      return `${month} has 29 days`;
+    } else {
+      return `${month} has 28 days`;
+    }
+  default:
+    return 'Must provide a valid month';
+  }
+}
+
+console.log(howManyDays('June', true));
