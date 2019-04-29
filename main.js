@@ -23,4 +23,25 @@ function beyond(num) {
   }
 }
 
-beyond(Number.NEGATIVE_INFINITY);
+// beyond(Number.NEGATIVE_INFINITY);
+
+function decode(codedString) {
+  if (codedString[0] === 'a' ) {
+  return console.log(codedString[1]);
+  } else if (codedString[0] === 'b') {
+    return console.log(codedString[2]);
+  } else if (codedString[0] === 'c') {
+    return console.log(codedString[3]);
+  } else if (codedString[0] === 'd') {
+      return console.log(codedString[4]);
+  } else 
+  return console.log(" ");
+}
+decode('craft');
+decode('block');
+decode('argon');
+decode('meter');
+decode('bells');
+decode('brown');
+decode('croon');
+decode('droop');
